@@ -9,11 +9,4 @@ python:
 install:
   - python setup.py install
 # command to run tests
-jobs:
-  include:
-    - stage: build
-      name: "install package"
-      script: python PyTest/test/hello.py
-    - stage: "Tests"                # naming the Tests stage
-      name: "Unit Tests"            # names the first Tests stage job
-      script: python PyTest/test/hello.py
+script: python PyTest/test/hello.py
