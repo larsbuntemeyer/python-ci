@@ -7,13 +7,13 @@ python:
   - "pypy3"  # currently Python 3.6.1,  PyPy 7.1.1-beta0
 # command to install dependencies
 install:
-  - python -V
+  - python setup.py install
 # command to run tests
 jobs:
   include:
     - stage: build
       name: "install package"
-      script: python setup.py install
+      script: python PyTest/test/hello.py
     - stage: "Tests"                # naming the Tests stage
       name: "Unit Tests"            # names the first Tests stage job
       script: python PyTest/test/hello.py
