@@ -2,4 +2,4 @@
 
 # python-ci
 
-test project for ci in a python project
+template project for ci in a python project
